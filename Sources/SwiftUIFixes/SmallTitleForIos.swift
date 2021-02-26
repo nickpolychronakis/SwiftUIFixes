@@ -10,7 +10,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 @available(OSX 10.15, *)
-extension View {
+public extension View {
     /// Επειδή το navigationBarTitleDisplayMode δεν υποστηρίζεται στο macOS, έφτιαξα αυτό το extension για να λειτουργεί σωστά και στα δύο λειτουγικά.
     func smallTitleForIos() -> some View {
         #if os(macOS)

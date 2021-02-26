@@ -9,7 +9,7 @@
 import SwiftUI
 
 #if os(iOS)
-extension UIApplication {
+public extension UIApplication {
     // Το χρησιμοποιώ έτσι:
     // .onTapGesture { UIApplication.shared.endEditing() }
     func endEditing() {

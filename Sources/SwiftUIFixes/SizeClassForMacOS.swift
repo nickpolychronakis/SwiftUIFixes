@@ -9,20 +9,20 @@ import SwiftUI
 
 
 #if os(macOS)
-enum UserInterfaceSizeClass {
+public enum UserInterfaceSizeClass {
     case compact
     case regular
 }
 
-struct HorizontalSizeClassEnvironmentKey: EnvironmentKey {
-    static let defaultValue: UserInterfaceSizeClass = .regular
+public struct HorizontalSizeClassEnvironmentKey: EnvironmentKey {
+    public static let defaultValue: UserInterfaceSizeClass = .regular
 }
-struct VerticalSizeClassEnvironmentKey: EnvironmentKey {
-    static let defaultValue: UserInterfaceSizeClass = .regular
+public struct VerticalSizeClassEnvironmentKey: EnvironmentKey {
+    public static let defaultValue: UserInterfaceSizeClass = .regular
 }
 
 @available(OSX 10.15, *)
-extension EnvironmentValues {
+public extension EnvironmentValues {
     var horizontalSizeClass: UserInterfaceSizeClass {
         get { return self[HorizontalSizeClassEnvironmentKey] }
         set { self[HorizontalSizeClassEnvironmentKey] = newValue }
