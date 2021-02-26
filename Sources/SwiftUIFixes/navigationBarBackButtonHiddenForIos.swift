@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
-@available(OSX 10.15, *)
 public extension View {
     /// Αν η εφαρμογή εκτελείται σε iOS, κρύβει το πίσω κουμπί
     func navigationBarBackButtonHiddenForIos(_ condition: Bool) -> some View {

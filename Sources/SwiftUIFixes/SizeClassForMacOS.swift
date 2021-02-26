@@ -21,7 +21,6 @@ public struct VerticalSizeClassEnvironmentKey: EnvironmentKey {
     public static let defaultValue: UserInterfaceSizeClass = .regular
 }
 
-@available(OSX 10.15, *)
 public extension EnvironmentValues {
     var horizontalSizeClass: UserInterfaceSizeClass {
         get { return self[HorizontalSizeClassEnvironmentKey] }
