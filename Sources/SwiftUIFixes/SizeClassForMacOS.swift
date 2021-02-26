@@ -23,11 +23,11 @@ public struct VerticalSizeClassEnvironmentKey: EnvironmentKey {
 
 @available(OSX 10.15, *)
 public extension EnvironmentValues {
-    public var horizontalSizeClass: UserInterfaceSizeClass {
+    var horizontalSizeClass: UserInterfaceSizeClass {
         get { return self[HorizontalSizeClassEnvironmentKey] }
         set { self[HorizontalSizeClassEnvironmentKey] = newValue }
     }
-    public var verticalSizeClass: UserInterfaceSizeClass {
+    var verticalSizeClass: UserInterfaceSizeClass {
         get { return self[VerticalSizeClassEnvironmentKey] }
         set { self[VerticalSizeClassEnvironmentKey] = newValue }
     }
