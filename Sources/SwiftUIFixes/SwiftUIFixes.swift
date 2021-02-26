@@ -1,3 +1,2 @@
-struct SwiftUIFixes {
-    var text = "Hello, World!"
+private struct SwiftUIFixes {
 }
