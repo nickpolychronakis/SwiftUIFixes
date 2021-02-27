@@ -88,9 +88,9 @@ public extension View {
 
 
 // MARK: SMALL TITLE
-public extension View {
+extension View {
     /// Επειδή το navigationBarTitleDisplayMode δεν υποστηρίζεται στο macOS, έφτιαξα αυτό το extension για να λειτουργεί σωστά και στα δύο λειτουγικά.
-    func smallTitleForIos() -> some View {
+    public func smallTitleForIos() -> some View {
         #if os(macOS)
         return self
         #else
