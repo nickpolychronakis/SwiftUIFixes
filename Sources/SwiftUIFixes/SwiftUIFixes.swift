@@ -76,6 +76,22 @@ public extension UIApplication {
 }
 #endif
 
+public extension View {
+    func closeIosKeyboard() -> some View{
+        #if os(macOS)
+        return self
+        #elseif os(iOS)
+        return self.gesture(
+            DragGesture()
+                .onChanged({ (dragValue) in
+                    if dragValue.translation.height > 15 {
+                        UIApplication.shared.endEditing()
+                    }
+                })
+        )
+        #endif
+    }
+}
 
 // MARK: BACK BUTTON HIDDEN
 public extension View {
