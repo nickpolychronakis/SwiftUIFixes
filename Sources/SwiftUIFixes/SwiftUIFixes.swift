@@ -77,7 +77,7 @@ public extension UIApplication {
 #endif
 
 public extension View {
-    func closeIosKeyboard() -> some View{
+    func closeIosKeyboardWithSwipeDown() -> some View{
         #if os(macOS)
         return self
         #elseif os(iOS)
@@ -89,6 +89,17 @@ public extension View {
                     }
                 })
         )
+        #endif
+    }
+    
+    func closeIosKeyboardWithTap() -> some View {
+        #if os(macOS)
+        return self
+        #elseif os(iOS)
+        return self
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
         #endif
     }
 }

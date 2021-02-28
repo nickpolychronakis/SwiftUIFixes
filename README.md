@@ -10,10 +10,21 @@
 
 ## Κλείσιμο πληκτρολογίου στο iOS
 Υποστηρίζει το κλείσιμο του πληκτρολογίου στο iOS προγραμματιστικά.
-Το προσθέτω έτσι:
+
+Το προσθέτω έτσι αν θέλω να το κλείσω με swipe down:
+```
+.closeIosKeyboardWithSwipeDown()
+```
+Ή έτσι αν θέλω να το κλείσω με tap:
 
 ```
-.onTapGesture { UIApplication.shared.endEditing() }
+.closeIosKeyboardWithTap()
+```
+
+ή έτσι αν θέλω να το χρησιμοποιήσω οποιδήποτε μέσα σε κώδικα.
+
+```
+UIApplication.shared.endEditing()
 ```
 
 ## Small Title for iOS
